@@ -532,7 +532,7 @@ div.end-menu img{
 
   .paragraphFirst{
       font-size: 14px;
-      padding: 10px 0 10px 16px;
+      padding: 10px 0 15px 16px;
       height:160px;
       display: -webkit-box;
       overflow: hidden;
@@ -583,9 +583,14 @@ div.end-menu img{
       scale: 1.01;
   }
 
-   .wrapperButtonAllNews {
-       padding-top: 90px;
-   }
+.wrapperButtonAllNews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding-top: 90px;
+    width: 100%;  
+}
 
   /**NaviAsideVertical**/
 .asideMenu {
