@@ -2,7 +2,7 @@
 <div>
 <div class="wrapperWidget">
     <div class="widgetLeft">
-        <img class="footerPhoto" src="./assets/logo.svg" alt="Logo" />
+        <img class="footerPhoto" src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" alt="Logo" />
     </div>
     <div class="widgetCenter">        
         <p class="widgetTitle">Dane kontaktowe</p>   
@@ -111,11 +111,6 @@
 </div>
 </div>
 </footer>
-<script>
-    $('.icon').click(function(){
-        $('span').toggleClass("cancel");
-    });
-</script>
 <?php wp_footer(); ?>
 </body>
 </html>

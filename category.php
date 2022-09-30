@@ -1,5 +1,4 @@
 <?php get_template_part('header-home'); ?>
-
 <body>
     <header class="header">
         <nav>
@@ -64,47 +63,19 @@
             </div>
         </div>
     </section>
-    <section id="menuVertical">
-        <div class="asideMenu">
-            <button class="wrapperAsideMenuItem">
-                <a href="/TariffView" class="buttonNaviAside" style="font-size: 30px">
-                    <span class="fa fa-euro-sign"></span>
-                    Cennik
-                </a>
-            </button>
-            <button class="wrapperAsideMenuItem">
-                <a href="/DownloadView" class="buttonNaviAside" style="font-size: 30px">
-                    <span class="fa fa-download iconMenu"></span>
-                    Do pobrania
-                </a>
-            </button>
-            <button class="wrapperAsideMenuItem">
-                <a href="/ContactView" class="buttonNaviAside" style="font-size: 30px">
-                    <span class="fa fa-user"></span>
-                    Kontakt
-                </a>
-            </button>
-        </div>
-    </section>
-    <section class="breakSectionTop">
-        <div class="wrapperBreakLine">
-            <div class="wrapperItemLeft">
-                <hr style="border-top: 1.5px solid #1680BC" />
-            </div>
-            <div class="wrapperItemCentral">
-                <div class="wrapperText"> Aktualności </div>
-            </div>
-            <div class="wrapperItemRight">
-                <hr style="border-top: 1.5px solid #1680BC" />
-            </div>
-        </div>
-    </section>
-    <section id="news">
-        <div class="mainWrapper">
-            <div class="wrapperWidgetCard">
-                <div class="wrapperNotice">
-                    <?php while (have_posts()) : the_post(); ?>
-                    <article class="card">
+   
+<section class="contentArticle">	
+		
+
+<?php 
+global $post;
+ $args = array(
+    'category'       => get_queried_object()->term_id,
+    'posts_per_page' => get_option( 'posts_per_page' ) );
+$myposts = get_posts( $args );
+foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+ <article class="card">
                         <div class="root">
                             <div class="cardHeader">
                                 <div class="headerCard">
@@ -136,58 +107,11 @@
                         </button>
                         </div>
                     </article>
-                <?php endwhile ?>                               
-                </div>
-                <div class="wrapperButtonAllNews">
-                    <button class="buttonAllNews">
-                        <a class="buttonALlNewsLink" href="/category/news/">Pozostałe aktualności</a>
-                    </button>
-                </div> 
-            </div>
-        </div> 
-    </section>
-        <section class="breakSection">
-            <div class="wrapperBreakLine">
-                <div class="wrapperItemLeft">
-                    <hr style="border-top: 1.5px solid #1680BC" />
-                </div>
-                <div class="wrapperItemCentral">
-                    <div class="wrapperText">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/smlogo.svg" alt="Small Brand mark"
-                            style="height: 80px; margin-top: -20px;" />
-                    </div>
-                </div>
-                <div class="wrapperItemRight">
-                    <hr style="border-top: 1.5px solid #1680BC" />
-                </div>
-            </div>
-        </section>
-        <section id="partners">
-            <div class="partnersWrapper">
-                <div class="partnersWrapperItem">
-                    <a href="http://gminalidzbark.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/herb/uglw.png" alt="Herg Gminy Lidzbark Warmiński"
-                            title="Gmina Lidzbark Warmiński" class="partnersWrapperItemPhoto" />
-                    </a>
-                </div>
-                <div class="partnersWrapperItem">
-                    <a href="http://www.lubomino.ug.gov.pl/" target="_blank" rel="noopener noreferrer">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/herb/uglub.png" alt="Herg Gminy Lubomino" title="Gmina Lubomino"
-                            class="partnersWrapperItemPhoto" />
-                    </a>
-                </div>
-                <div class="partnersWrapperItem">
-                    <a href="https://www.kolno-gmina.pl/" target="_blank" rel="noopener noreferrer">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/herb/ugkol.jpg" alt="Herg Gminy Kolno" title="Gmina Kolno"
-                            class="partnersWrapperItemPhoto" />
-                    </a>
-                </div>
-                <div class="partnersWrapperItem">
-                    <a href="https://gorowoilaweckie.eu/" target="_blank" rel="noopener noreferrer">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/herb/uggi.jpg" alt="Herg Gminy Górowo Iławeckie"
-                            title="Gmina Górowo Iławeckie" class="partnersWrapperItemPhoto" />
-                    </a>
-                </div>
-            </div>
-        </section>
-        <?php get_footer(); ?>
+
+<?php endforeach;
+wp_reset_postdata();?>
+
+</section>  
+
+
+<?php get_footer(); ?>
