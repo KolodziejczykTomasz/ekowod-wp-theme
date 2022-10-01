@@ -726,9 +726,7 @@ div.end-menu img{
     margin: 0 auto;
 }
 
-.wrapperFooterContrast{
-    background-color: #FFFF00;
-}
+
 
 .wrapperWidget {
     display: grid;
@@ -842,14 +840,6 @@ div.end-menu img{
 
 .linkFooter:hover {
     color: #1680bc;
-}
-
-.buttonTrue {
-    background-color: #ffff00;
-}
-
-.buttonFalse {
-    background-color: white;
 }
 
 .widgetRightList, .widgetCenterList {
@@ -1025,10 +1015,115 @@ div.end-menu img{
     }
 }
 
-.contentArticle{
-    display: block;   
+.contentArticle{  
     min-height: 600px;
     height: auto;   
-    width: 100%;
-    border: 2px solid red;    
+    width: 100%; 
+     
+}
+.contentArticle article{
+margin-top: 70px;
+}
+.sp-cardMain, .ct-cardMain {
+     display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+}
+
+.cardFooter {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;  
+    margin-bottom: 20px;  
+}
+.sp-cardCategory{
+    display: flex;
+    padding: 10px;
+}
+
+.sp-titleCard{
+     font-size: 18px;
+      font-weight: 600;
+      padding-left: 15px;
+      color: black;
+      
+  }
+
+.sp-cardMain, .sp-cardAuthor{
+   padding: 10px;
+   
+}
+.sp-cardMain img{
+   max-height: 400px;
+   width: auto;
+}
+
+
+.sp-cardContent{
+    display: block;
+    font-size: 18px;
+    line-height: 25px;
+    width:100%;
+    padding: 10px 10px 10px 20px;
+}
+
+.sp-titleFooter {
+    font-weight: 600;
+    padding-right: 5px;
+}
+
+.sp-cardHeight{
+   min-height: 320px; 
+}
+
+.sp-cardBorderBottom {
+    border-bottom: 2px solid #9CB53A;
+}
+
+.ct-card article{
+    margin-top: 10px;
+}
+
+.ct-cardMain img{
+   max-height: 200px;
+   width: auto;
+   padding: 10px;
+}
+
+.ct-cardHeight{
+   min-height: 200px; 
+}
+
+.ct-cardFooter {
+    display: grid;  
+    height: 65px;
+}
+
+.ct-wrapperButtonMore {
+    display: flex;
+    align-items: center;
+    justify-self:end;
+    margin-right: 40px;
+}
+
+.ct-buttonMore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    width: auto;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 30px;
+    text-transform: uppercase;
+    transition: ease-in 0.16s;
+    border: 4px solid #b6cc37;
+    color: #b6cc37;
+    background: none;
+}
+
+.ct-buttonMore:hover {
+    color: black;
+    border: 1px solid #b6cc37;
+    text-decoration: none;
 }

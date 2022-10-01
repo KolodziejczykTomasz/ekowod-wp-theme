@@ -50,7 +50,6 @@
                     </div>
                 </li>
             </ul>
-
         </nav>
     </header>
     <section class="hero">
@@ -62,17 +61,24 @@
                 </div>
             </div>
         </div>
-    </section>
-   
-<section class="contentArticle">	
-		<div class="info">
-			<span><?php the_category(); ?></span>
-			<span><?php the_author(); ?></span>|<span><?php the_time('d-m-Y'); ?></span>
-		</div>
-		<h2> <?php the_title(); ?> </h2>
-		<p> <?php the_content(); ?> </p>
-
-</section>  
-
-
+    </section>   
+    <section class="contentArticle">	
+    <div  class="cardWrapper">
+        <div class="cardHeader">
+        <div class="cardHeaderDate"><?php the_time('d-m-Y'); ?></div>
+        <div class="cardHeaderTitle"><?php the_title(); ?></div>
+        </div>
+        <div>
+        <div class="cardMainPhoto">
+            <?php the_post_thumbnail();?> 
+        </div>
+        <div class="cardMainContent">
+        <?php the_content(); ?> 
+        </div>
+        </div>
+        <div class="cardFooter">
+            Kategoria: <?php the_category(); ?>
+        </div>
+    </div>
+    </section>  
 <?php get_footer(); ?>

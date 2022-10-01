@@ -62,16 +62,47 @@
                 </div>
             </div>
         </div>
-    </section>
-   
+    </section>   
 <section class="contentArticle">	
-		<div class="info">
-			<span><?php the_category(); ?></span>
-			<span><?php the_author(); ?></span>|<span><?php the_time('d-m-Y'); ?></span>
-		</div>
-		<h2> <?php the_title(); ?> </h2>
-		<p> <?php the_content(); ?> </p>
-
+ <article class="card sp-cardBorderBottom ">
+    <div class="root sp-cardHeight">
+        <div class="cardHeader">
+            <div class="headerCard">
+                <div class="avatarWrapper">
+                    <div class="avatar" aria-label="recipe">
+                        <?php the_title_excerpt('', '', true, '2'); ?>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="sp-titleCard"><?php the_title(); ?></div>
+                    </div>
+                    <div>
+                        <div class="subheaderData"><?php the_time('d.m.Y'); ?>r.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sp-cardMain">
+            <div class="sp-cardImage">
+                <a href="#" target="_blank" rel="noreferrer">
+                <?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
+                </a>
+            </div>
+            <div class="sp-cardContent"> <?php the_content(); ?> 
+            </div>
+        </div>                        
+        <div class="cardFooter greyText">                            
+            <div class="sp-cardCategory"> <span class="sp-titleFooter">Kategoria: </span><?php echo the_category(); ?></div>                      
+            <div class="sp-cardAuthor"> <span class="sp-titleFooter">Autor: </span><?php echo get_the_author_meta('display_name', $post->post_author); ?>
+            </div>
+        </div>
+    </div>
+</article>
+    </div>
+    </div>
+  </div>
+</section>  
 </section>  
 
 

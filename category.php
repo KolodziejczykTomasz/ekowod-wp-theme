@@ -74,40 +74,43 @@ global $post;
     'posts_per_page' => get_option( 'posts_per_page' ) );
 $myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-
- <article class="card">
-                        <div class="root">
-                            <div class="cardHeader">
-                                <div class="headerCard">
-                                    <div class="avatarWrapper">
-                                        <div class="avatar" aria-label="recipe">
-                                            <?php the_title_excerpt('', '', true, '2'); ?>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <div class="titleCard"><?php the_title(); ?></div>
-                                        </div>
-                                        <div>
-                                            <div class="subheaderData"><?php the_time('d.m.Y'); ?>r.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cardContent">
-                                <a href="#" target="_blank" rel="noreferrer">
-                                  <?php the_post_thumbnail();?>
-                                </a>
-                                <div class="subtitleCard"><?php the_excerpt(); ?></div>
-                                <div class="paragraphFirst"> <?php the_content(); ?> 
-                                </div>
-                            </div>                        
-                        <button class="buttonMore">
-                            <a class="buttonLink" href="<?php the_permalink(); ?>">więcej</a>
-                        </button>
-                        </div>
-                    </article>
-
+<article class="ct-card sp-cardBorderBottom">
+    <div class="root ct-cardHeight">
+        <div class="cardHeader">
+            <div class="headerCard">
+                <div class="avatarWrapper">
+                    <div class="avatar" aria-label="recipe">
+                        <?php the_title_excerpt('', '', true, '2'); ?>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="sp-titleCard"><?php the_title(); ?></div>
+                    </div>
+                    <div>
+                        <div class="subheaderData"><?php the_time('d.m.Y'); ?>r.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ct-cardMain">
+            <div class="ct-cardImage">
+                <a href="#" target="_blank" rel="noreferrer">
+                <?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
+                </a>
+            </div>
+            <div class="sp-cardContent"> <?php echo technig_content(100); ?> 
+            </div>
+        </div>                        
+        <div class="ct-cardFooter">      
+            <div class="ct-wrapperButtonMore">
+                <button class="ct-buttonMore">
+                <a class="buttonLink" href="<?php the_permalink(); ?>">więcej</a>
+            </button>
+        </div>             
+        </div>        
+    </div>
+</article>
 <?php endforeach;
 wp_reset_postdata();?>
 
