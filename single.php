@@ -63,6 +63,28 @@
             </div>
         </div>
     </section>   
+     <section id="menuVertical">
+        <div class="asideMenu">
+            <button class="wrapperAsideMenuItem">
+                <a href="/TariffView" class="buttonNaviAside" style="font-size: 30px">
+                    <span class="fa fa-euro-sign"></span>
+                    Cennik
+                </a>
+            </button>
+            <button class="wrapperAsideMenuItem">
+                <a href="/DownloadView" class="buttonNaviAside" style="font-size: 30px">
+                    <span class="fa fa-download iconMenu"></span>
+                    Do pobrania
+                </a>
+            </button>
+            <button class="wrapperAsideMenuItem">
+                <a href="/ContactView" class="buttonNaviAside" style="font-size: 30px">
+                    <span class="fa fa-user"></span>
+                    Kontakt
+                </a>
+            </button>
+        </div>
+    </section>
 <section class="contentArticle">	
  <article class="card sp-cardBorderBottom ">
     <div class="root sp-cardHeight">
@@ -89,9 +111,13 @@
                 <?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
                 </a>
             </div>
-            <div class="sp-cardContent"> <?php the_content(); ?> 
+            <div class="sp-cardContent"> 
+                <?php the_content(); ?> 
             </div>
-        </div>                        
+        </div> 
+         <div class="sp-gallery"> 
+                <?php the_content(); ?> 
+            </div>                       
         <div class="cardFooter greyText">                            
             <div class="sp-cardCategory"> <span class="sp-titleFooter">Kategoria: </span><?php echo the_category(); ?></div>                      
             <div class="sp-cardAuthor"> <span class="sp-titleFooter">Autor: </span><?php echo get_the_author_meta('display_name', $post->post_author); ?>

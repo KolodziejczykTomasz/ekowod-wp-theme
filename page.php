@@ -61,24 +61,69 @@
                 </div>
             </div>
         </div>
-    </section>   
-    <section class="contentArticle">	
-    <div  class="cardWrapper">
-        <div class="cardHeader">
-        <div class="cardHeaderDate"><?php the_time('d-m-Y'); ?></div>
-        <div class="cardHeaderTitle"><?php the_title(); ?></div>
-        </div>
-        <div>
-        <div class="cardMainPhoto">
-            <?php the_post_thumbnail();?> 
-        </div>
-        <div class="cardMainContent">
-        <?php the_content(); ?> 
-        </div>
-        </div>
-        <div class="cardFooter">
-            Kategoria: <?php the_category(); ?>
-        </div>
-    </div>
     </section>  
+     <section id="menuVertical">
+        <div class="asideMenu">
+            <button class="wrapperAsideMenuItem">
+                <a href="/TariffView" class="buttonNaviAside" style="font-size: 30px">
+                    <span class="fa fa-euro-sign"></span>
+                    Cennik
+                </a>
+            </button>
+            <button class="wrapperAsideMenuItem">
+                <a href="/DownloadView" class="buttonNaviAside" style="font-size: 30px">
+                    <span class="fa fa-download iconMenu"></span>
+                    Do pobrania
+                </a>
+            </button>
+            <button class="wrapperAsideMenuItem">
+                <a href="/ContactView" class="buttonNaviAside" style="font-size: 30px">
+                    <span class="fa fa-user"></span>
+                    Kontakt
+                </a>
+            </button>
+        </div>
+    </section>   
+    <section class="page-content">
+           <section class="breakSectionTop">
+        <div class="wrapperBreakLine">
+            <div class="wrapperItemLeft">
+                <hr style="border-top: 1.5px solid #1680BC" />
+            </div>
+            <div class="wrapperItemCentral">
+                <div class="wrapperText"> <?php the_title(); ?> </div>
+            </div>
+            <div class="wrapperItemRight">
+                <hr style="border-top: 1.5px solid #1680BC" />
+            </div>
+        </div>
+    </section>	
+        <div class="cardWrapper">            
+            <div class="page-card-content">     
+            <?php the_content(); ?>
+            <?php the_post_thumbnail( 'single-post-thumbnail' ); ?> 
+            </div>
+            </div>    
+            <div class="cardFooter">
+            </div>
+        </div>
+    </section>  
+     <section class="breakSection page-breakSection">
+            <div class="wrapperBreakLine">
+                <div class="wrapperItemLeft">
+                    <hr style="border-top: 1.5px solid #1680BC" />
+                </div>
+                <div class="wrapperItemCentral">
+                    <div class="wrapperText">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/smlogo.svg" alt="Small Brand mark"
+                            style="height: 80px; margin-top: -20px;" />
+                    </div>
+              
+
+                </div>
+                <div class="wrapperItemRight">
+                    <hr style="border-top: 1.5px solid #1680BC" />
+                </div>
+            </div>
+        </section>
 <?php get_footer(); ?>

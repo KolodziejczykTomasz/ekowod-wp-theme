@@ -50,7 +50,6 @@
                     </div>
                 </li>
             </ul>
-
         </nav>
     </header>
     <section class="hero">
@@ -63,10 +62,29 @@
             </div>
         </div>
     </section>
-   
+    <section id="menuVertical">
+        <div class="asideMenu">
+            <button class="wrapperAsideMenuItem">
+                <a href="/TariffView" class="buttonNaviAside" style="font-size: 30px">
+                    <span class="fa fa-euro-sign"></span>
+                    Cennik
+                </a>
+            </button>
+            <button class="wrapperAsideMenuItem">
+                <a href="/DownloadView" class="buttonNaviAside" style="font-size: 30px">
+                    <span class="fa fa-download iconMenu"></span>
+                    Do pobrania
+                </a>
+            </button>
+            <button class="wrapperAsideMenuItem">
+                <a href="/ContactView" class="buttonNaviAside" style="font-size: 30px">
+                    <span class="fa fa-user"></span>
+                    Kontakt
+                </a>
+            </button>
+        </div>
+    </section> 
 <section class="contentArticle">	
-		
-
 <?php 
 global $post;
  $args = array(
@@ -94,7 +112,8 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
             </div>
         </div>
         <div class="ct-cardMain">
-            <div class="ct-cardImage">
+            <div class="ct-cardImage ct-cardWrapperImage">
+                
                 <a href="#" target="_blank" rel="noreferrer">
                 <?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
                 </a>

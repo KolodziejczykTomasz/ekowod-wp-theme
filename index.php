@@ -124,11 +124,15 @@
                                 </div>
                             </div>
                             <div class="cardContent">
+                                <div class="cardWrapperImage">
                                 <a href="#" target="_blank" rel="noreferrer">
                                   <?php the_post_thumbnail();?>
                                 </a>
-                                <div class="subtitleCard"><?php the_excerpt(); ?></div>
-                                <div class="paragraphFirst"> <?php the_content(); ?> 
+                                </div>
+                                <div class="cardMainContent">
+                                    <div class="subtitleCard"><?php echo get_excerpt(); ?></div>
+                                    <div class="paragraphFirst"> <?php echo technig_content(50); ?>  
+                                </div>
                                 </div>
                             </div>                        
                         <button class="buttonMore">
