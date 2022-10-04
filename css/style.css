@@ -37,6 +37,21 @@ body::after {
     opacity: 0.13;
     z-index: -1;
 }
+
+h1 {
+font-size: 32px;
+font-weight: 600;
+}
+
+h2 {
+font-size: 24px;
+font-weight: 600;
+}
+
+h3 {
+font-size: 18.72px;
+font-weight: 600;
+}
   /*Navbar*/
 .header {
     height: 90px;
@@ -475,7 +490,7 @@ div.end-menu img{
   }
 
   .aligncenter {
-display: none;
+    display: none;
   }
   .avatarWrapper{
       padding: 10px;
@@ -549,18 +564,6 @@ display: none;
       padding-left: 15px;
       font-weight: 600;}
 
-  .root2 {
-
-      background-color: yellow;
-      max-width: 100%;
-      min-height:580px;
-      height: auto;
-      transition: .3s;
-  }
-
-  .root2:hover{
-      transform: scale(2.0);
-  }
 
  .avatar {
       background-color: #637201;
@@ -574,9 +577,6 @@ display: none;
       background-color: #fff;
   }
 
- .root:hover {
-      transform: scale(1.1);
-      }
 
 .wrapperButtonAllNews {
     display: flex;
@@ -1045,7 +1045,7 @@ margin-top: 70px;
 
 .cardFooter {
     display: grid;
-    grid-template-columns: 0.2fr 0.8fr;  
+    grid-template-columns: 0.3fr 0.6fr 0.3fr;  
     margin-bottom: 20px;  
 }
 .sp-cardCategory{
@@ -1231,4 +1231,147 @@ hr.page-style {
      width: 80%;
      margin: 0 auto;
      text-align: center; 
+}
+
+/*Page 404*/
+.page-404 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 22px;
+    height: 400px;
+
+}
+
+/*Page Contact*/
+
+.wrapperContact {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+}
+
+.wrapperContact ul li {
+    display: flex;
+    margin: 30px 0;
+}
+
+.wrapperContact ul .fa-phone {
+    margin-right: 10px;
+    margin-top: -18px;
+}
+
+.wrapperContact ul .fa-envelope{
+    margin-right: 10px;
+    margin-top: -18px;
+}
+.wrapperContact ul .fa-home{
+    margin-right: 10px;
+    margin-top: -18px;
+}
+.contactTitle {
+  margin-left: -50px;
+}
+
+.wrapperContactSubtitle {
+  margin: 10px auto 50px auto;
+}
+
+#wrapperContactTextenter {
+  text-align: left;
+  margin-bottom: 40px;
+  padding-right: 20px;
+}
+.wrapperContactAccident {
+  margin-top: 80px;
+}
+.wrapperContactAddress {
+  align-self: left;
+}
+
+.wrapperContactAddressItem {
+  display: block;
+  margin-bottom: 20px;
+}
+.wrapperContactMap {
+  width: 100%;
+}
+
+
+/** @media **/
+
+@media only screen and (max-width: 600px) {
+  .wrapperContact {
+    grid-template-columns: 1fr;
+  }
+
+  .wrapperContactAddress {
+    margin-bottom: 40px;
+  }
+
+  .contactTitle {
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .wrapperContactTextenter {
+    text-align: justify;
+    hyphens: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .wrapperContact {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .wrapperContactAddress {
+    margin-bottom: 40px;
+  }
+
+  .contactTitle {
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .wrapperContactTextenter {
+    text-align: justify;
+    hyphens: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .wrapperContact {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 30px 30px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .wrapperContact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 1250px;
+    padding: 30px 30px;
+  }
+
+  .contactTitle {
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+
+  .wrapperContactTextenter{
+    padding-right: 30px;
+  }
+
+  .wrapperContactMap{
+    margin-top: 50px;
+  }
 }

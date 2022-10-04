@@ -3,7 +3,7 @@
     <header class="header">
         <nav>
             <div class="logo">
-                <a class="brand" href="/">
+                <a class="brand" href="#">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" alt="Brand Logo" class="brandLogo" width="150px">
                 </a>
             </div>
@@ -12,8 +12,8 @@
             </label>
             <input type="checkbox" id="btn">
             <ul>
-                <li><a href="/">Start</a></li>
-                <li><a href="/o-nas">O nas</a></li>
+                <li><a href="#">Aktualności</a></li>
+                <li><a href="/home">O nas</a></li>
                 <li>
                     <label for="btn-2" class="show">Obiekty</label>
                     <a href="#">Obiekty</a>
@@ -43,15 +43,15 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="#">Kontakt</a></li>
                 <li class="end-menu-link">
                     <div class="end-menu">
-                        <a href="http://lidzbarkwarminski-ekowod.bip-wm.pl/public/" target="_blank" rel="noopener noreferrer"> <img src="<?php echo get_template_directory_uri(); ?>/assets/bip.png" alt="BIP" /> </a>
+                        <a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/assets/bip.png" alt="" /> </a>
                     </div>
                 </li>
             </ul>
         </nav>
-    </header> 
+    </header>
     <section class="hero">
         <div class="hero-body">
             <div class="heroTextWrapper">
@@ -61,69 +61,29 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="menuVertical">
-        <div class="asideMenu">
-            <button class="wrapperAsideMenuItem">
-                <a href="/cennik" class="buttonNaviAside" style="font-size: 30px">
-                    <span class="fa fa-euro-sign"></span>
-                    Cennik
-                </a>
-            </button>
-            <button class="wrapperAsideMenuItem">
-                <a href="/pobieranie" class="buttonNaviAside" style="font-size: 30px">
-                    <span class="fa fa-download iconMenu"></span>
-                    Do pobrania
-                </a>
-            </button>
-            <button class="wrapperAsideMenuItem">
-                <a href="/kontakt" class="buttonNaviAside" style="font-size: 30px">
-                    <span class="fa fa-user"></span>
-                    Kontakt
-                </a>
-            </button>
-        </div>
-    </section> 
-    <section class="page-content">
-           <section>
+    </section>  
+     <section>
         <div class="wrapperBreakLine">
             <div class="wrapperItemLeft">
                 <hr style="border-top: 1.5px solid #1680BC" />
             </div>
             <div class="wrapperItemCentral">
-                <div class="wrapperText"> <?php the_title(); ?> </div>
+                <div class="wrapperText">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/smlogo.svg" alt="Small Brand mark"
+                        style="height: 80px; margin-top: -20px;" />
+                </div>
             </div>
             <div class="wrapperItemRight">
                 <hr style="border-top: 1.5px solid #1680BC" />
             </div>
         </div>
-    </section>	
-        <div class="cardWrapper">            
-            <div class="page-card-content">     
-            <?php the_content(); ?>
-            <?php the_post_thumbnail( 'single-post-thumbnail' ); ?> 
-            </div>
-            </div>    
-            <div class="cardFooter">
-            </div>
+    </section>
+    <section >
+        <div class="page-404">
+            <div>404. Wystąpił błąd.</div>
+            <div>Nie można znaleźć żądanego adresu URL na tym serwerze. </div>
+            <div>To wszystko, co wiemy.</div>
         </div>
-    </section>  
-     <section class="breakSection page-breakSection">
-            <div class="wrapperBreakLine">
-                <div class="wrapperItemLeft">
-                    <hr style="border-top: 1.5px solid #1680BC" />
-                </div>
-                <div class="wrapperItemCentral">
-                    <div class="wrapperText">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/smlogo.svg" alt="Small Brand mark"
-                            style="height: 80px; margin-top: -20px;" />
-                    </div>
-              
-
-                </div>
-                <div class="wrapperItemRight">
-                    <hr style="border-top: 1.5px solid #1680BC" />
-                </div>
-            </div>
-        </section>
+    </section>
+    
 <?php get_footer(); ?>

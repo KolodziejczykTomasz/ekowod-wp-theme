@@ -1,10 +1,9 @@
-<?php get_template_part('header-home'); ?>
-
+<?php get_header(); ?>
 <body>
     <header class="header">
         <nav>
             <div class="logo">
-                <a class="brand" href="#">
+                <a class="brand" href="/">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" alt="Brand Logo" class="brandLogo" width="150px">
                 </a>
             </div>
@@ -13,8 +12,8 @@
             </label>
             <input type="checkbox" id="btn">
             <ul>
-                <li><a href="#">Aktualności</a></li>
-                <li><a href="/home">O nas</a></li>
+                <li><a href="/">Start</a></li>
+                <li><a href="/o-nas">O nas</a></li>
                 <li>
                     <label for="btn-2" class="show">Obiekty</label>
                     <a href="#">Obiekty</a>
@@ -44,14 +43,13 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
                 <li class="end-menu-link">
                     <div class="end-menu">
-                        <a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/assets/bip.png" alt="" /> </a>
+                        <a href="http://lidzbarkwarminski-ekowod.bip-wm.pl/public/" target="_blank" rel="noopener noreferrer"> <img src="<?php echo get_template_directory_uri(); ?>/assets/bip.png" alt="BIP" /> </a>
                     </div>
                 </li>
             </ul>
-
         </nav>
     </header>
     <section class="hero">
@@ -67,19 +65,19 @@
     <section id="menuVertical">
         <div class="asideMenu">
             <button class="wrapperAsideMenuItem">
-                <a href="/TariffView" class="buttonNaviAside" style="font-size: 30px">
+                <a href="/cennik" class="buttonNaviAside" style="font-size: 30px">
                     <span class="fa fa-euro-sign"></span>
                     Cennik
                 </a>
             </button>
             <button class="wrapperAsideMenuItem">
-                <a href="/DownloadView" class="buttonNaviAside" style="font-size: 30px">
+                <a href="/pobieranie" class="buttonNaviAside" style="font-size: 30px">
                     <span class="fa fa-download iconMenu"></span>
                     Do pobrania
                 </a>
             </button>
             <button class="wrapperAsideMenuItem">
-                <a href="/ContactView" class="buttonNaviAside" style="font-size: 30px">
+                <a href="/kontakt" class="buttonNaviAside" style="font-size: 30px">
                     <span class="fa fa-user"></span>
                     Kontakt
                 </a>
