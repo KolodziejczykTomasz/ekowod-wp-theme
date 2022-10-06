@@ -1061,16 +1061,18 @@ margin-top: 70px;
       
   }
 
+
+
 .sp-cardMain, .sp-cardAuthor{
    padding: 10px;
    
 }
+
 .sp-cardMain img{
    max-height: 280px;
    width: auto;   
    background-size: cover;
 }
-
  .contentArticle .aligncenter {
 display: block;
   } 
@@ -1081,6 +1083,9 @@ display: block;
     width:100%;
     padding: 10px 10px 10px 20px;
 }
+
+
+
 
 .sp-cardContent .gallery {
 display: none;
@@ -1375,3 +1380,6 @@ hr.page-style {
     margin-top: 50px;
   }
 }
+
+.single – post .wp – post – image{display:none;}
+

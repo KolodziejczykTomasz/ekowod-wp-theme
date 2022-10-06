@@ -123,9 +123,9 @@
                             </div>
                             <div class="cardContent">
                                 <div class="cardWrapperImage">
-                                <a href="#" target="_blank" rel="noreferrer">
-                                  <?php the_post_thumbnail();?>
-                                </a>
+                                <a href="<?php the_permalink(); ?>">
+       <img src="<?php the_post_thumbnail_url('large'); ?>"/>
+     </a>
                                 </div>
                                 <div class="cardMainContent">
                                     <div class="subtitleCard"><?php echo get_excerpt(); ?></div>

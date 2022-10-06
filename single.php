@@ -105,19 +105,15 @@
             </div>
         </div>
            <hr style="border-top: 1.5px solid gray" />
-        <div class="cardWrapper">            
-            <div class="page-card-content">     
+        <div class="cardWrapper">              
            <div class="sp-cardContent"> 
                 <?php the_content(); ?> 
-            </div>
-        </div> 
-         <div class="sp-gallery"> 
-                <?php the_content(); ?> 
             </div>  
-            </div>
-            </div>    
-            <div class="cardFooter">
-            </div>
+            <div class="sp-gallery"> 
+               <?php the_content(); ?> 
+        </div>  
+        </div>
+            </div> 
         </div>          
         <div class="cardFooter greyText">                            
             <div class="sp-cardCategory"> <span class="sp-titleFooter">Kategoria: </span><?php echo the_category(); ?></div>                      
