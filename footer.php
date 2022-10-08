@@ -13,7 +13,7 @@
             </li>
             <li class="widgetListItem">
                 <span class="fa fa-phone widgetIcon" ></span>
-                <span class="widgetIconSpan">89 764 20 26</span>
+               <a class="linkFooter" href="tel:+897642026">89 764 20 26</a>
             </li>
             <li class="widgetListItem">
                 <span class="fa fa-home widgetIcon"></span>
@@ -23,7 +23,7 @@
             </li>
             <li class="widgetListItem">
                 <span class="fa fa-envelope widgetIcon" ></span>
-                <span class="widgetIconSpan">biuro@ekowod-lidzbark.pl</span>
+                <a class="linkFooter" href="mailto:biuro@ekowod-lidzbark.pl">biuro@ekowod-lidzbark.pl</a>
             </li>
         </ul>
     </div>
@@ -47,26 +47,26 @@
                 <li class="widgetListItem">
                     <span class="fa fa-chevron-right widgetIcon" ></span>
                     <span class="widgetIconSpan">
-            <a  href="/TariffView" class="linkFooter">Cennik</a>
+            <a  href="/cennik" class="linkFooter">Cennik</a>
             </span>
                 </li>
                 <li class="widgetListItem">
                     <span class="fa fa-chevron-right widgetIcon" ></span>
                     <span class="widgetIconSpan">
-            <a href="/RodoView" class="linkFooter"> Ochrona danych osobowych</a>
+            <a href="/rodo" class="linkFooter"> Ochrona danych osobowych</a>
             </span>
                 </li>
                 <li class="widgetListItem">
                     <span class="fa fa-chevron-right widgetIcon" ></span>
                     <span class="widgetIconSpan">
-            <a href="/WcagView" class="linkFooter"> Oświadczenie o dostępności </a>
+            <a href="/wcag" class="linkFooter"> Oświadczenie o dostępności </a>
             </span>
                 </li>
                 <li class="widgetListItem">
                     <span class="fa fa-chevron-right widgetIcon" ></span>
                     <span class="widgetIconSpan">
             <a
-                    href="http://ekowod-lidzbark.pl/files/raport.pdf"
+                    href="http://127.0.0.1/wp-content/uploads/2022/10/raport.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="linkFooter">
@@ -77,7 +77,7 @@
                 <li class="widgetListItem">
                     <span class="fa fa-chevron-right widgetIcon" ></span>
                     <span class="widgetIconSpan">
-            <a href="/ContactView" class="linkFooter"> Zgłoś awarię </a>
+            <a href="/kontakt" class="linkFooter"> Zgłoś awarię </a>
             </span>
                 </li>
             </ul>
@@ -93,7 +93,7 @@
 <div id="widgetBottom">
     <div id="widgetBottomLeft">
         <p class="widgetBottomText">
-            <a href="/CookiesView" class="linkFooter"> Polityka prywatności </a>
+            <a href="/cookies" class="linkFooter"> Polityka prywatności </a>
         </p>
     </div>
     <div id="widgetBottomRight">

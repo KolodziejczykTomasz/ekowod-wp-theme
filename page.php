@@ -24,10 +24,10 @@
                             <a href="#">Hydrofornie <span class="fa fa-plus"></span></a>
                             <input type="checkbox" id="btn-3">
                             <ul>
-                                <li><a href="#">Lidzbark Warmiński</a></li>
-                                <li><a href="#">Górowo Iławeckie</a></li>
-                                <li><a href="#">Kolno</a></li>
-                                <li><a href="#">Lubomino</a></li>
+                                <li><a href="/h-lidzbark-warminski">Lidzbark Warmiński</a></li>
+                                <li><a href="/h-gorowo-ilaweckie">Górowo Iławeckie</a></li>
+                                <li><a href="/h-gmina-kolno">Kolno</a></li>
+                                <li><a href="/h-lubomino">Lubomino</a></li>
                             </ul>
                         </li>
                         <li>
@@ -35,10 +35,10 @@
                             <a href="#">Oczyszczalnie <span class="fa fa-plus"></span></a>
                             <input type="checkbox" id="btn-4">
                             <ul>
-                                <li><a href="#">Lidzbark Warmiński</a></li>
-                                <li><a href="#">Górowo Iławeckie</a></li>
-                                <li><a href="#">Kolno</a></li>
-                                <li><a href="#">Lubomino</a></li>
+                                <li><a href="/o-lidzbark-warminski">Lidzbark Warmiński</a></li>
+                                <li><a href="/o-gorowo-ilaweckie">Górowo Iławeckie</a></li>
+                                <li><a href="/o-kolno">Kolno</a></li>
+                                <li><a href="/o-lubomino">Lubomino</a></li>
                             </ul>
                         </li>
                     </ul>

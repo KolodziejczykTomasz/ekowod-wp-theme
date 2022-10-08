@@ -11,9 +11,9 @@
                 <span class="fa fa-bars"></span>
             </label>
             <input type="checkbox" id="btn">
-            <ul>
-                <li><a href="#">Aktualności</a></li>
-                <li><a href="/home">O nas</a></li>
+           <ul>
+                <li><a href="/">Start</a></li>
+                <li><a href="/o-nas">O nas</a></li>
                 <li>
                     <label for="btn-2" class="show">Obiekty</label>
                     <a href="#">Obiekty</a>
@@ -24,10 +24,10 @@
                             <a href="#">Hydrofornie <span class="fa fa-plus"></span></a>
                             <input type="checkbox" id="btn-3">
                             <ul>
-                                <li><a href="#">Lidzbark Warmiński</a></li>
-                                <li><a href="#">Górowo Iławeckie</a></li>
-                                <li><a href="#">Kolno</a></li>
-                                <li><a href="#">Lubomino</a></li>
+                                <li><a href="/h-lidzbark-warminski">Lidzbark Warmiński</a></li>
+                                <li><a href="/h-gorowo-ilaweckie">Górowo Iławeckie</a></li>
+                                <li><a href="/h-gmina-kolno">Kolno</a></li>
+                                <li><a href="/h-lubomino">Lubomino</a></li>
                             </ul>
                         </li>
                         <li>
@@ -35,18 +35,18 @@
                             <a href="#">Oczyszczalnie <span class="fa fa-plus"></span></a>
                             <input type="checkbox" id="btn-4">
                             <ul>
-                                <li><a href="#">Lidzbark Warmiński</a></li>
-                                <li><a href="#">Górowo Iławeckie</a></li>
-                                <li><a href="#">Kolno</a></li>
-                                <li><a href="#">Lubomino</a></li>
+                                <li><a href="/o-lidzbark-warminski">Lidzbark Warmiński</a></li>
+                                <li><a href="/o-gorowo-ilaweckie">Górowo Iławeckie</a></li>
+                                <li><a href="/o-kolno">Kolno</a></li>
+                                <li><a href="/o-lubomino">Lubomino</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
                 <li class="end-menu-link">
                     <div class="end-menu">
-                        <a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/assets/bip.png" alt="" /> </a>
+                        <a href="http://lidzbarkwarminski-ekowod.bip-wm.pl/public/" target="_blank" rel="noopener noreferrer"> <img src="<?php echo get_template_directory_uri(); ?>/assets/bip.png" alt="BIP" /> </a>
                     </div>
                 </li>
             </ul>

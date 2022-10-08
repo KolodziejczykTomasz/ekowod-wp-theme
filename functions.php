@@ -17,34 +17,18 @@
         }
     }
 
-function get_excerpt(){
-$excerpt = get_the_content();
+	function get_excerpt(){
+$excerpt = get_the_excerpt();
 $excerpt = preg_replace(" ([.*?])",'',$excerpt);
 $excerpt = strip_shortcodes($excerpt);
 $excerpt = strip_tags($excerpt);
-$excerpt = substr($excerpt, 0, 120);
+$excerpt = substr($excerpt, 0, 160);
 $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
 $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
 $excerpt = $excerpt.'...';
 return $excerpt;
 }
-
-    function technig_content($limit){
-    $content = explode(' ', get_the_content(), $limit);
-
-    if (count($content)>=$limit){
-        array_pop($content);
-        $content = implode(" ",$content).'...'; 
-    } else {
-        $content = implode(" ",$content);
-    }
-        
-    $content = preg_replace('/\[.+\]/','', $content);
-    $content = apply_filters('the_content', $content); 
-    $content = str_replace(']]>', ']]&gt;', $content);
-    return $content;
-    }
-
+   
 function add_featured_image_support_to_your_wordpress_theme() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'small-thumbnail', 100, 100, true );

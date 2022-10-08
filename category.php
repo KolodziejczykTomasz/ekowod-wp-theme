@@ -24,10 +24,10 @@
                             <a href="#">Hydrofornie <span class="fa fa-plus"></span></a>
                             <input type="checkbox" id="btn-3">
                             <ul>
-                                <li><a href="#">Lidzbark Warmiński</a></li>
-                                <li><a href="#">Górowo Iławeckie</a></li>
-                                <li><a href="#">Kolno</a></li>
-                                <li><a href="#">Lubomino</a></li>
+                                <li><a href="/h-lidzbark-warminski">Lidzbark Warmiński</a></li>
+                                <li><a href="/h-gorowo-ilaweckie">Górowo Iławeckie</a></li>
+                                <li><a href="/h-gmina-kolno">Kolno</a></li>
+                                <li><a href="/h-lubomino">Lubomino</a></li>
                             </ul>
                         </li>
                         <li>
@@ -35,10 +35,10 @@
                             <a href="#">Oczyszczalnie <span class="fa fa-plus"></span></a>
                             <input type="checkbox" id="btn-4">
                             <ul>
-                                <li><a href="#">Lidzbark Warmiński</a></li>
-                                <li><a href="#">Górowo Iławeckie</a></li>
-                                <li><a href="#">Kolno</a></li>
-                                <li><a href="#">Lubomino</a></li>
+                                <li><a href="/o-lidzbark-warminski">Lidzbark Warmiński</a></li>
+                                <li><a href="/o-gorowo-ilaweckie">Górowo Iławeckie</a></li>
+                                <li><a href="/o-kolno">Kolno</a></li>
+                                <li><a href="/o-lubomino">Lubomino</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -85,14 +85,21 @@
         </div>
     </section> 
 <section class="contentArticle">	
-<?php 
-global $post;
- $args = array(
-    'category'       => get_queried_object()->term_id,
-    'posts_per_page' => get_option( 'posts_per_page' ) );
-$myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-<article class="ct-card sp-cardBorderBottom">
+    <?php
+$args = array(
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'category_name' => 'news',
+    'posts_per_page' => 19,
+);
+$arr_posts = new WP_Query( $args );
+  
+if ( $arr_posts->have_posts() ) :
+  
+    while ( $arr_posts->have_posts() ) :
+        $arr_posts->the_post();
+        ?>
+        <article class="ct-card sp-cardBorderBottom">
     <div class="root ct-cardHeight">
         <div class="cardHeader">
             <div class="headerCard">
@@ -113,12 +120,18 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
         </div>
         <div class="ct-cardMain">
             <div class="ct-cardImage ct-cardWrapperImage">
-                
                 <a href="#" target="_blank" rel="noreferrer">
                 <?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
                 </a>
-            </div>
-            <div class="sp-cardContent"> <?php echo technig_content(100); ?> 
+            </div>                                
+            <div class="sp-cardContent"> 
+                <div>
+                    <?php echo the_excerpt(); ?>
+                </div>                     
+                <div>
+                    <?php $content = get_the_content();$trimmed_content = wp_trim_words( $content, 40, '<a href="'. get_permalink() .'">...</a>' ); ?>
+                    <?php echo $trimmed_content; ?>
+                </div> 
             </div>
         </div>                        
         <div class="ct-cardFooter">      
@@ -130,7 +143,9 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
         </div>        
     </div>
 </article>
-<?php endforeach;
+        <?php
+    endwhile;
+endif;
 wp_reset_postdata();?>
 
 </section>  
