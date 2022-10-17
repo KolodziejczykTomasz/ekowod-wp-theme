@@ -85,69 +85,76 @@
         </div>
     </section> 
 <section class="contentArticle">	
-    <?php
-$args = array(
-    'post_type' => 'post',
-    'post_status' => 'publish',
-    'category_name' => 'news',
-    'posts_per_page' => 19,
-);
-$arr_posts = new WP_Query( $args );
-  
-if ( $arr_posts->have_posts() ) :
-  
-    while ( $arr_posts->have_posts() ) :
-        $arr_posts->the_post();
-        ?>
+    <div>
+       <?php
+        $current_page = get_queried_object();
+        $category     = $current_page->post_name;
+        $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+        $query = new WP_Query( 
+            array(
+                'paged'         => $paged, 
+                'category_name' => 'news',
+                'order'         => 'desc',
+                'post_type'     => 'post',
+                'post_status'   => 'publish',
+            )
+        );
+        if ($query->have_posts()) {
+               while ($query->have_posts()) { 
+               $query->the_post(); ?>
         <article class="ct-card sp-cardBorderBottom">
-    <div class="root ct-cardHeight">
-        <div class="cardHeader">
-            <div class="headerCard">
-                <div class="avatarWrapper">
-                    <div class="avatar" aria-label="recipe">
-                        <?php the_title_excerpt('', '', true, '2'); ?>
+            <div class="root ct-cardHeight">
+                <div class="cardHeader">
+                    <div class="headerCard">
+                        <div class="avatarWrapper">
+                            <div class="avatar" aria-label="recipe">
+                                <?php the_title_excerpt('', '', true, '2'); ?>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="sp-titleCard"><?php the_title(); ?></div>
+                            </div>
+                            <div>
+                                <div class="subheaderData"><?php the_time('d.m.Y'); ?>r.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <div class="sp-titleCard"><?php the_title(); ?></div>
+                <div class="ct-cardMain">
+                    <div class="ct-cardImage ct-cardWrapperImage">
+                        <a href="#" target="_blank" rel="noreferrer">
+                        <?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
+                        </a>
+                    </div>                                
+                    <div class="sp-cardContent"> 
+                        <div>
+                            <?php echo the_excerpt(); ?>
+                        </div>                     
+                        <div>
+                            <?php $content = get_the_content();$trimmed_content = wp_trim_words( $content, 40, '<a href="'. get_permalink() .'">...</a>' ); ?>
+                            <?php echo $trimmed_content; ?>
+                        </div> 
                     </div>
-                    <div>
-                        <div class="subheaderData"><?php the_time('d.m.Y'); ?>r.</div>
-                    </div>
-                </div>
+                </div>                        
+                <div class="ct-cardFooter">      
+                    <div class="ct-wrapperButtonMore">
+                        <button class="ct-buttonMore">
+                        <a class="buttonLink" href="<?php the_permalink(); ?>">więcej</a>
+                    </button>
+                </div>             
+                </div>        
             </div>
-        </div>
-        <div class="ct-cardMain">
-            <div class="ct-cardImage ct-cardWrapperImage">
-                <a href="#" target="_blank" rel="noreferrer">
-                <?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
-                </a>
-            </div>                                
-            <div class="sp-cardContent"> 
-                <div>
-                    <?php echo the_excerpt(); ?>
-                </div>                     
-                <div>
-                    <?php $content = get_the_content();$trimmed_content = wp_trim_words( $content, 40, '<a href="'. get_permalink() .'">...</a>' ); ?>
-                    <?php echo $trimmed_content; ?>
-                </div> 
-            </div>
-        </div>                        
-        <div class="ct-cardFooter">      
-            <div class="ct-wrapperButtonMore">
-                <button class="ct-buttonMore">
-                <a class="buttonLink" href="<?php the_permalink(); ?>">więcej</a>
-            </button>
-        </div>             
-        </div>        
-    </div>
-</article>
+        </article>
+    </div>   
         <?php
-    endwhile;
-endif;
-wp_reset_postdata();?>
-
+            }
+            next_posts_link( '<-- Starsze wpisy   ', $query->max_num_pages );
+            previous_posts_link( '    Nowsze wpisy -->' );
+            wp_reset_postdata();
+        }
+        ?>
+ 
 </section>  
 
 

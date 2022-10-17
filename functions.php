@@ -44,4 +44,15 @@ function wpdocs_post_image_html( $html, $post_id, $post_image_id ) {
 add_filter( 'post_thumbnail_html', 'wpdocs_post_image_html', 10, 3 );
 
 
+
+add_filter('next_posts_link_attributes', 'next_link_attributes');
+add_filter('previous_posts_link_attributes', 'previous_link_attributes');
+
+function previous_link_attributes() {
+  return 'class="previous_link"';
+}
+
+function next_link_attributes() {
+  return 'class="next_link"';
+}
   ?>
